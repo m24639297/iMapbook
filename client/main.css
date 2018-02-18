@@ -1,0 +1,34 @@
+#head-bar {
+	height: 50px;
+	background-color: #eee
+}
+
+#head-main-button, #login-button{
+	height: 100%;
+	background-color:#808080;
+	text-align: center;
+	cursor: pointer;
+}
+#login-button {
+	margin-right: 10px;
+}
+.click{
+	cursor: pointer;
+}
+#report-button{
+	height: 40px;
+	background-color: #dd3;
+	border: solid;
+	margin: 10px 0px;
+}
+
+#board-and-type{
+	height: 200px;
+	border: solid;
+	margin-top: 60px
+}
+
+#event-list{
+	height: 200px;
+	border: solid;
+}

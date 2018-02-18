@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Map</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="shortcut icon" type="image/x-icon" href="http://leafletjs.com/examples/quick-start/docs/images/favicon.ico">  
+    <link rel="stylesheet" href="./../packages/leaflet/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+	<script src="./../packages/leaflet/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<div id = "head-bar" >
+	<input type="button" name="iMapbook" value="iMapbook" style="float: left" id="head-main-button" class="click" onclick="javasript:location.href = 'main.html'">
+	<input type="button" name="login" value="Login" style="float: right" id="login-button" class="click">
+</div>
+
+<div id = "left-div", style="float: left; width: 70%">
+	<div>
+		<input type="button" id="report-button" name="report" value="REPORT" class="click" onclick="javasript: location.href = 'question.html'"> 
+	</div>
+	<div id="mapid" style="width: 100%; height: 520px; position: relative;" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0"></div>
+</div>
+
+<div id="right-div" style="float: right; width: 30%; height: 100%">
+	<div id="board-and-type">
+		<div style="float: left;">看板選項區</div>
+		<div style="float: right;">
+			看板：
+			<select id = "board-select" onchange="update_type()"><option>Select Board</option></select><br>
+			Data since 
+			<select id = "time-selector" onchange="set_time()">
+				<option>1 hr</option>
+				<option>3 hrs</option>
+				<option> 6 hrs</option>
+				<option> 12 hrs</option>
+				<option> 1 day</option>
+				<option> 2 days</option>
+				<option> 3 days</option>
+				<option> 7 days</option>
+			</select><br>
+			<input type="checkbox" id="show-finished-data" onclick="set_show_all()"> Show all
+		</div><br><br>
+		事件種類：
+		<div id="type-content" style="overflow: scroll; height: 140px; width: 90%;">
+			
+		</div>
+	</div>
+	<div id="event-list">
+		詳細資料區
+	</div>
+</div>
+
+
+<script src="./main.js"></script>
+</body>
+</html>

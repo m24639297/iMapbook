@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<title>Map</title>
@@ -11,8 +11,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-
-<body>
+<body><div style="min-width: 900px; margin-left: 40px; margin-right: 40px">
 <div id = "head-bar" >
 	<input type="button" name="iMapbook" value="iMapbook" style="float: left" id="head-main-button" class="click" onclick="javasript:location.href = 'main.html'">
 	<input type="button" name="login" value="Login" style="float: right" id="login-button" class="click">
@@ -30,7 +29,7 @@
 		<div style="float: left;">看板選項區</div>
 		<div style="float: right;">
 			看板：
-			<select id = "board-select" onchange="update_type()"><option>Select Board</option></select><br>
+			<select id = "board-select" onchange="board_refresh()"><option>Select Board</option></select><br>
 			Data since 
 			<select id = "time-selector" onchange="set_time()">
 				<option>1 hr</option>
@@ -49,12 +48,18 @@
 			
 		</div>
 	</div>
-	<div id="event-list">
-		詳細資料區
+	<div id="event-list"> 
+		<div id = "event-list-head">
+			<div style="float:left;"> Event list</div>
+		</div>
+		<div id="event-list-content">
+			a<br>a<br>a<br>a<br><br>aa<br><br>aa<br><br>aa<br><br>aa
+		</div>
+		<div id="event-list-buttom"><a href="">show all</a></div>
 	</div>
 </div>
 
 
 <script src="./main.js"></script>
-</body>
+</div></body>
 </html>
